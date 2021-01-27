@@ -1,0 +1,140 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Argo.MyProject</name>
+    </assembly>
+    <members>
+        <member name="T:Argo.MyProject.Bl.MyProjectBl">
+            <summary>
+            What is the purpose of this BL class
+            </summary>
+        </member>
+        <member name="M:Argo.MyProject.Bl.MyProjectBl.#ctor(Microsoft.Extensions.Logging.ILogger{Argo.MyProject.Bl.MyProjectBl})">
+            <summary>
+            Describe your parameters
+            </summary>
+            <param name="logger">This initiates the logger</param>
+        </member>
+        <member name="M:Argo.MyProject.Bl.MyProjectBl.GetDetails(System.Guid)">
+            <summary>
+            Here is the awesome Bl method.  Describe what it does.
+            </summary>
+            <param name="myParam">What does this parameter do?</param>
+            <returns></returns>
+        </member>
+        <member name="T:Argo.MyProject.Contracts.IMyProjectBl">
+            <summary>
+            TODO: If you put comments in the interface file, great.  If not, disable the warning if using xml comments. 
+            </summary>
+        </member>
+        <member name="T:Argo.MyProject.Controllers.MyProjectController">
+            <summary>
+            TODO: Describe what this controller does?
+            </summary>
+        </member>
+        <member name="M:Argo.MyProject.Controllers.MyProjectController.#ctor(Microsoft.Extensions.Logging.ILogger{Argo.MyProject.Controllers.MyProjectController},Argo.MyProject.Contracts.IMyProjectBl)">
+            <summary>
+            What do all these variables do?
+            </summary>
+            <param name="logger">Class logger for this controller to log events and errors</param>
+            <param name="myProjectBl">This should be the BL class that this controller will call do do the work.</param>
+        </member>
+        <member name="M:Argo.MyProject.Controllers.MyProjectController.GetDetails(System.Guid)">
+            <summary>
+            TODO: Add a description for your service.
+            </summary>
+            <param name="myParam">Add a description for your parameter here.</param>
+            <returns></returns>
+            <remarks>Use remarks to add additional information about the service.
+            Always make controller services async.<br />
+            Use Task and ActionResult as part of your return type.  If you are returning data, make that part of the action result as shown below.<br/>
+            Every status that is returned should be defined by the ProducesResponseType attribute. The most common are added to the example below.<br/>
+            A 400, Bad Request, should be a problem with the call and something that the client should be able to correct.<br/>
+            A 500, Server Error, should provide details on what went wrong.  This is typically out of the client's ability to correct.<br/>
+            See https://httpstatuses.com/ for a comprehensive list of codes and definitions.
+            </remarks>
+        </member>
+        <member name="T:Argo.MyProject.Model.MyProjectDTO">
+            <summary>
+            This is for project data.
+            Make as many of these as needed.
+            Consider creating a DTO project if there are many DTOs and if they are shared across multiple projects.
+            </summary>
+        </member>
+        <member name="P:Argo.MyProject.Model.MyProjectDTO.DataId">
+            <summary>
+            This field might represent the unique identifier for the record.
+            </summary>
+        </member>
+        <member name="P:Argo.MyProject.Model.MyProjectDTO.DataPoint1">
+            <summary>
+            Always add comments over a data field to describe its purpose.
+            </summary>
+        </member>
+        <member name="P:Argo.MyProject.Model.MyProjectDTO.HasMoreData">
+            <summary>
+            Comments over your fields can show up in the Swagger Document
+            </summary>
+        </member>
+        <member name="P:Argo.MyProject.Model.MyProjectDTO.NextId">
+            <summary>
+            Comments should tell the consumer of your data what to expect.
+            </summary>
+        </member>
+        <member name="P:Argo.MyProject.Model.MyProjectDTO.PIIData">
+            <summary>
+            This is PII data and should not be written to the log file except in debug builds.
+            </summary>
+        </member>
+        <member name="M:Argo.MyProject.Model.MyProjectDTO.ToString">
+            <summary>
+            By overriding the ToString method, we are able to output the information in the object to the log file.
+            Notice that PII data is blocked out for non-debug builds.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Argo.MyProject.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            This method gets called by the runtime. Use this method to add services to the container. 
+            </summary>
+            <param name="services">The services to configure.</param>
+        </member>
+        <member name="M:Argo.MyProject.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+            </summary>
+            <param name="app"></param>
+            <param name="env"></param>
+        </member>
+        <member name="T:Argo.MyProject.Swagger.SwaggerAddHeaderParameters">
+            <summary>
+            TODO: Customize as needed for the project.  It is recommended that the UniqueId be kept as it is used for log tracing across systems.
+            Add other fields that will be needed for all calls.
+            </summary>
+        </member>
+        <member name="T:Argo.MyProject.Util.Constants">
+            <summary>
+            Add other constant values as needed for the project.
+            </summary>
+        </member>
+        <member name="T:Argo.MyProject.Util.ScrubData">
+            <summary>
+            Used to hide PII data.
+            </summary>
+        </member>
+        <member name="M:Argo.MyProject.Util.ScrubData.Obscure(System.String,System.Int32,System.Char)">
+            <summary>
+             Mask sensitive PII data within DTOs.
+            </summary>
+            <param name="data">The data to mask</param>
+            <param name="maxLen">The maximum length of masked data</param>
+            <param name="replaceChar">The character used as the mask.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Argo.MyProject.Util.UtilStringFunctions">
+            <summary>
+            Generally useful string functions.  Remove if not needed.
+            </summary>
+        </member>
+    </members>
+</doc>
